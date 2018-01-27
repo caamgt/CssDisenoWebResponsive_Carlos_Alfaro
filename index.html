@@ -7,12 +7,13 @@
 	<meta name="keywords" content="Css Diseño Web Responsive">
 	<meta name="description" content="Css Diseño Web Responsive">
 	<link href="https://fonts.googleapis.com/css?family=Lato|Open+Sans|Roboto" rel="stylesheet">
+	<link rel="stylesheet" href="css/estilos.css">
 	<title>Comenzando con la Fotograf&iacute;a</title>
 </head>
 <body>
 	<header>
-		<h1>Comenzando con la fotograf&iacute;a</h1>
-		<navbar>
+		<h1 id="titulo">Comenzando con la fotograf&iacute;a</h1>
+		<navbar id="menu-principal">
 			<ul>
 				<li><a href="#">Inicio</a></li>
 				<li><a href="#">Paisajes</a></li>
@@ -21,23 +22,27 @@
 		</navbar>
 	</header>
 	<section>
-		<figure>
-			<img src="img/imagenCentral.jpg" alt="Imagen Central" title="Paisaje del caribe">
-		</figure>
+		<div id="imagenCentral">
+			<figure>
+				<img src="img/imagenCentral.jpg" alt="Imagen Central" title="Paisaje del caribe" class="adaptativa-porcentaje">
+			</figure>
+		</div>
 	</section>
 	<section>
-		<article>
-			<figure>
-				<img src="img/imagenMontanas.jpg">
-			</figure>
-			<figcaption>Paisaje</figcaption>
-		</article>
-		<article>
-			<figure>
-				<img src="img/imagenRetrato.jpg">
-			</figure>
-			<figcaption>Retrato</figcaption>
-		</article>
+		<div id="contenido">
+			<div id="imagenMontanas">
+				<figure>
+					<img src="img/imagenMontanas.jpg" class="adaptativa-porcentaje">
+				</figure>
+				<figcaption>Paisaje</figcaption>
+			</div>
+			<div id="imagenRetrato">
+				<figure>
+					<img src="img/imagenRetrato.jpg" class="adaptativa-porcentaje">
+				</figure>
+				<figcaption>Retrato</figcaption>
+		</div>
+	</div>
 	</section>
 
 	<footer>
