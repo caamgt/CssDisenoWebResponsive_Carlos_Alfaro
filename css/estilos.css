@@ -27,6 +27,7 @@ header {
 
 #menu-principal {
 	width: 30%;
+	float: right;
 }
 
 ul{
@@ -57,22 +58,33 @@ ul li a {
 }
 
 #imagenCentral figure img {
-	width: 60vw;
+	width: 60%;
+}
+
+
+/* Imagen Central */
+
+div [class*="bloque"]{
+  min-height: 200px;
+  min-width: 200px;
+  flex: 1 2 50%;
 }
 
 #contenido {
 	display: flex;
-	flex-direction: row;
+  	flex-flow: row wrap;
 }
 
-#imagenMontanas, #imagenRetrato figure img {
-	width: 500px;
+.boque1 {
+	order: 1;
 }
-#contenedor > div {
-	width: 500px;
+
+.bloque2 {
+	order: 2;
 }
+
 .adaptativa-porcentaje{
-	width:90%;
+	width:100%;
 }
 
 .adaptativa-porcentaje-1 {
@@ -83,4 +95,8 @@ ul li a {
 }
 .adaptativa-porcentaje-3 {
 	width: 20%;
+}
+
+footer {
+	clear: both;
 }
