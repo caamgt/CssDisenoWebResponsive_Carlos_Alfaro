@@ -3,6 +3,9 @@
 	padding: 0;
 }
 body {
+	width: 80%;
+	background-color: black;
+	margin-left: 10%;
 	font-family: 'Roboto', sans-serif;
 	font-size: 100%;
 }
@@ -15,10 +18,11 @@ header {
 	background-color: #5b7989;
 	width: 100%;
 	top: 0;
-	padding: 1vh 1vw;
+	border: 1px;
+	border-radius: 10px 10px 0px 0px;
 }
 
-#titulo {
+#logo {
 	width: 70%;
 	padding-left: 2%;
 	padding-top: 1%;
@@ -51,31 +55,35 @@ ul li a {
 }
 
 #imagenCentral {
-	text-align: center;
+	display:  -webkit-flex;
+	flex-direction: column;
+	-webkit-flex-direction: column;
+	align-items: center;
 	padding-top: 2%;
 	padding-bottom: 2%;
 	background-color:  #82c3a6;
 }
 
 #imagenCentral figure img {
-	width: 60%;
+	max-width: 450;
 }
 
 
 /* Imagen Central */
 
-div [class*="bloque"]{
-  min-height: 200px;
-  min-width: 200px;
-  flex: 1 2 50%;
-}
-
 #contenido {
+	text-align: center;
+	padding-top: 2%;
+	margin: 0;
 	display: flex;
-  	flex-flow: row wrap;
+	flex-flow: row wrap;
+  	justify-content: center space-around;
+  	height: 100%;
+  	width: 100%;
+  	background-color: #d5c75f;
 }
 
-.boque1 {
+.bloque1 {
 	order: 1;
 }
 
@@ -83,20 +91,26 @@ div [class*="bloque"]{
 	order: 2;
 }
 
-.adaptativa-porcentaje{
-	width:100%;
-}
 
-.adaptativa-porcentaje-1 {
-	width: 70%;
-}
-.adaptativa-porcentaje-2 {
-	width: 50%;
-}
-.adaptativa-porcentaje-3 {
-	width: 20%;
+#contenido #imagenMontana img, #contenido #imagenRetrato img {
+	max-width: 100%;
+	max-height: 300px;
+	border: 1px solid black;
 }
 
 footer {
+	display: flex;
+  	justify-content: center space-around;
+  	flex-direction: row wrap;
+  	height: 100%;
+  	width: 100%;
 	clear: both;
+	background-color: #C6d5c5;
+	border: 1px;
+	border-radius: 0px 0px 10px 10px
+}
+
+footer .c1, footer .c2, .c3, .c4 {
+	max-width: 100%;
+	max-height: 20px;
 }
