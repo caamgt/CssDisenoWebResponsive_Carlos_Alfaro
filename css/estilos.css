@@ -147,7 +147,7 @@ a:hover, a:focus {
 
 
 /* Pie de pagina */
-footer {
+.pieDePagina {
 	display: flex;
   	justify-content: center space-around;
   	flex-direction: row wrap;
@@ -156,5 +156,27 @@ footer {
 	clear: both;
 	background-color: #C6d5c5;
 	border: 1px;
-	border-radius: 0px 0px 10px 10px
+	border-radius: 0px 0px 10px 10px;
+	text-align: center;
+	padding-top: 3%;
+}
+
+.contacto .redesSociales, .derechos {
+	width: 25%;
+}
+
+.terminos {
+	width: 15%;
+}
+
+.redesSociales {
+	width: 25%;
+}
+
+.derechos {
+	width: 25%;
+}
+
+.redesSociales img {
+	width: 50px;
 }
