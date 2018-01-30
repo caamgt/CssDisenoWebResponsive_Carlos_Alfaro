@@ -5,7 +5,7 @@
 body {
 	width: 80%;
 	background-color: black;
-	margin-left: 10%;
+	margin: 0 auto;
 	font-family: 'Great Vibes', cursive;
 	font-size: 100%;
 }
@@ -73,38 +73,60 @@ a:hover, a:focus {
 	background-color:  #82c3a6;
 }
 
-#imagenCentral figure img {
-	max-width: 450;
-}
+/* Imagen Secundaria */
 
-
-/* Imagen Central */
-
-#contenido {
+#ImagenSecundaria {
 	text-align: center;
 	padding-top: 2%;
 	margin: 0;
 	display: flex;
 	flex-flow: row wrap;
-  	justify-content: center space-around;
-  	height: 100%;
-  	width: 100%;
   	background-color: #d5c75f;
+  	border: 1px;
 }
 
-.bloque1 {
+#paisajes {
 	order: 1;
+	width: 50%;
 }
 
-.bloque2 {
+#retratos {
 	order: 2;
+	width: 50%;
 }
 
 
-#contenido #imagenMontana img, #contenido #imagenRetrato img {
-	max-width: 100%;
+#ImagenSecundaria #paisajes img, #ImagenSecundaria #retratos img {
 	max-height: 300px;
-	border: 1px solid black;
+}
+
+#ImagenSecundaria #paisajes img {
+	transition: all 1s;
+	-moz-transition: all 1s;
+	-o-transition: all 1s;
+	-ms-transition: all 1s;
+}
+
+#ImagenSecundaria #paisajes img:hover {
+	transform: rotate(10deg);
+	-moz-transform: rotate(10deg);
+	-o-transform: rotate(10deg);
+	-ms-transform: rotate(10deg);
+	border: 2px solid #82c3a6;
+}
+
+#ImagenSecundaria #retratos img {
+	transition: all 1s;
+	-moz-transition: all 1s;
+	-o-transition: all 1s;
+	-ms-transition: all 1s;
+}
+
+#ImagenSecundaria #retratos img:hover {
+	transform: translate( 20px, -5px);
+	-webkit-transform: translate( 20px, -5px);
+	-moz-transform: translate( 20px, -5px);
+	border: 2px solid #82c3a6;
 }
 
 footer {
