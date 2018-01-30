@@ -1,17 +1,25 @@
+@font-face {
+	font-family: 'Dancing Script';
+	src: url('fonts/DancingScript-Regular.otf');
+}
+
 *{
 	margin: 0;
 	padding: 0;
 }
+
 body {
-	width: 80%;
-	background-color: black;
+	background-color: #02010a;
+	font-family: 'Dancing Script', 'Great Vibes', cursive;
+}
+
+#contenido {
 	margin: 0 auto;
-	font-family: 'Great Vibes', cursive;
-	font-size: 100%;
+	max-width: 900px;
 }
 
 header {
-	font-size: 1.5em;
+	font-size: 16px;
 	color: white;
 	display: inline-flex;
 	flex-flow: row;
@@ -65,12 +73,17 @@ a:hover, a:focus {
 
 #imagenCentral {
 	display: -webkit-flex;
-	flex-direction: column;
-	-webkit-flex-direction: column;
-	align-items: center;
+	flex-direction: row;
+	-webkit-flex-direction: row;
 	padding-top: 2%;
 	padding-bottom: 2%;
 	background-color:  #82c3a6;
+	text-align: center;
+}
+
+#imagenCentral img {
+	border: 2px solid #02010a;
+	width: 80%;
 }
 
 /* Imagen Secundaria */
@@ -81,6 +94,7 @@ a:hover, a:focus {
 	margin: 0;
 	display: flex;
 	flex-flow: row wrap;
+	-webkit-flex-flow: row wrap;
   	background-color: #d5c75f;
   	border: 1px;
 }
@@ -98,6 +112,8 @@ a:hover, a:focus {
 
 #ImagenSecundaria #paisajes img, #ImagenSecundaria #retratos img {
 	max-height: 300px;
+	border: 2px solid #02010a;
+	width: 85%;
 }
 
 #ImagenSecundaria #paisajes img {
@@ -129,6 +145,8 @@ a:hover, a:focus {
 	border: 2px solid #82c3a6;
 }
 
+
+/* Pie de pagina */
 footer {
 	display: flex;
   	justify-content: center space-around;
