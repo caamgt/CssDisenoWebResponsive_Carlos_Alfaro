@@ -51,7 +51,7 @@ ul{
   padding-right: 15%;
 }
 
-li{
+#menu-principal ul li{
   float: right;
   display: block;
   margin: 0px 5px;
@@ -59,7 +59,7 @@ li{
   height: 100%;
 }
 
-ul li a {
+#menu-principal ul li a {
 	text-decoration: underline;
 	color: white;
 }
@@ -149,7 +149,6 @@ a:hover, a:focus {
 /* Pie de pagina */
 .pieDePagina {
 	display: flex;
-  	justify-content: center space-around;
   	flex-direction: row wrap;
   	height: 100%;
   	width: 100%;
@@ -157,26 +156,57 @@ a:hover, a:focus {
 	background-color: #C6d5c5;
 	border: 1px;
 	border-radius: 0px 0px 10px 10px;
-	text-align: center;
 	padding-top: 3%;
+	padding-bottom: 3%;
 }
 
-.contacto .redesSociales, .derechos {
+.pieDePagina ul li {
+	text-align: left;
+}
+
+.contacto ul, .terminos p, .redesSociales ul, .derechos p {
+	padding-top: 10%;
+}
+
+.redesSociales ul li a {
+	text-decoration: none;
+}
+
+
+.contenido-Redes ul li {
+	width: 30%;
+}
+
+.contenido-Redes ul li {
+	display: flex;
+	-webkit-flex-flow: row wrap;
+}
+
+.contenido-Redes ul li a {
+	width: 100%;
+}
+
+.contenido-Redes ul li img {
+	width: 100%;
+}
+
+.contacto {
 	width: 25%;
+	padding-left: 3%;
 }
 
 .terminos {
-	width: 15%;
+	width: 20%;
 }
 
 .redesSociales {
-	width: 25%;
+	width: 30%;
 }
 
 .derechos {
 	width: 25%;
 }
 
-.redesSociales img {
-	width: 50px;
+img[src$='.svg'] {
+	width: 15%;
 }
