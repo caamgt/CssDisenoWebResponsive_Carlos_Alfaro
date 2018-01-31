@@ -18,6 +18,23 @@ body {
 	max-width: 900px;
 }
 
+/* Animación del header slidein */
+
+@-webkit-keyframes header-slidein {
+	0%{
+		position: relative;
+		margin-top: 150%;
+	}
+	60%{
+		position: relative;
+		margin-top: -5%;
+	}
+	100%{
+		position: relative;
+		margin-top: 0;
+	}
+}
+
 header {
 	font-size: 16px;
 	color: white;
@@ -29,6 +46,13 @@ header {
 	top: 0;
 	border: 1px;
 	border-radius: 10px 10px 0px 0px;
+	animation-name: header-slidein;
+	animation-duration: 2s;
+	-moz-animation-duration: 2s;
+	-ms-animation-duration: 2s;
+	animation-delay: 1s;
+	-ms-animation-delay: 1s;
+	-moz-animation-delay: 1s;
 }
 
 #logo {
@@ -147,6 +171,11 @@ a:hover, a:focus {
 
 
 /* Pie de pagina */
+
+img[src$='.svg'] {
+	width: 15%;
+}
+
 .pieDePagina {
 	display: flex;
   	flex-direction: row wrap;
@@ -164,7 +193,7 @@ a:hover, a:focus {
 	text-align: left;
 }
 
-.contacto ul, .terminos p, .redesSociales ul, .derechos p {
+.contacto ul, .terminos p, .derechos p {
 	padding-top: 10%;
 }
 
@@ -172,22 +201,8 @@ a:hover, a:focus {
 	text-decoration: none;
 }
 
-
 .contenido-Redes ul li {
 	width: 30%;
-}
-
-.contenido-Redes ul li {
-	display: flex;
-	-webkit-flex-flow: row wrap;
-}
-
-.contenido-Redes ul li a {
-	width: 100%;
-}
-
-.contenido-Redes ul li img {
-	width: 100%;
 }
 
 .contacto {
@@ -205,8 +220,4 @@ a:hover, a:focus {
 
 .derechos {
 	width: 25%;
-}
-
-img[src$='.svg'] {
-	width: 15%;
 }
