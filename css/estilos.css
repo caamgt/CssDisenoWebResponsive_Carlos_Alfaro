@@ -50,9 +50,6 @@ header {
 	animation-duration: 2s;
 	-moz-animation-duration: 2s;
 	-ms-animation-duration: 2s;
-	animation-delay: 1s;
-	-ms-animation-delay: 1s;
-	-moz-animation-delay: 1s;
 }
 
 #logo {
@@ -208,6 +205,10 @@ img[src$='.svg'] {
 .contacto {
 	width: 25%;
 	padding-left: 3%;
+}
+
+.contacto ul li a {
+	text-decoration: none;
 }
 
 .terminos {
