@@ -15,7 +15,7 @@ body {
 
 #contenido {
 	margin: 0 auto;
-	max-width: 900px;
+	max-width: 95%;
 }
 
 /* Animación del header slidein */
@@ -35,11 +35,15 @@ body {
 	}
 }
 
+figcaption {
+	font-size: 1.5em;
+}
+
 header {
 	font-size: 16px;
 	color: white;
-	display: inline-flex;
-	flex-flow: row;
+	display: flex;
+	flex-flow: row wrap;
 	margin: 0 auto;
 	background-color: #5b7989;
 	width: 100%;
@@ -50,31 +54,30 @@ header {
 	animation-duration: 2s;
 	-moz-animation-duration: 2s;
 	-ms-animation-duration: 2s;
+	text-align: center;
 }
 
 #logo {
 	text-shadow: 2px 2px #02010a;
-	width: 70%;
-	padding: 2%;
-	float: left;
+	width: 100%;
+	font-size: 2.5em;
 }
 
 #menu-principal {
-	padding: 2%;
-	width: 30%;
-	float: right;
+	width: 100%;
+	text-align: center;
+	font-size: 1.2em;
 }
 
 ul{
 	padding-top: 1%;
   list-style-type: none;
   margin: 0;
-  padding-right: 15%;
+  padding-right: 0;
 }
 
 #menu-principal ul li{
-  float: right;
-  display: block;
+  display: inline-block;
   margin: 0px 5px;
   padding: 15px 0px;
   height: 100%;
@@ -96,15 +99,15 @@ a:hover, a:focus {
 	display: -webkit-flex;
 	flex-direction: row;
 	-webkit-flex-direction: row;
-	padding-top: 2%;
-	padding-bottom: 2%;
+	padding-top: 3%;
+	padding-bottom: 3%;
 	background-color:  #82c3a6;
 	text-align: center;
 }
 
 #imagenCentral img {
 	border: 2px solid #02010a;
-	width: 80%;
+	width: 85%;
 }
 
 /* Imagen Secundaria */
@@ -122,12 +125,12 @@ a:hover, a:focus {
 
 #paisajes {
 	order: 1;
-	width: 50%;
+	width: 100%;
 }
 
 #retratos {
 	order: 2;
-	width: 50%;
+	width: 100%;
 }
 
 
@@ -175,7 +178,7 @@ img[src$='.svg'] {
 
 .pieDePagina {
 	display: flex;
-  	flex-direction: row wrap;
+  	flex-flow: row wrap;
   	height: 100%;
   	width: 100%;
 	clear: both;
@@ -186,12 +189,15 @@ img[src$='.svg'] {
 	padding-bottom: 3%;
 }
 
+div > h2 {
+	font-size: 2em;
+}
 .pieDePagina ul li {
 	text-align: left;
 }
 
 .contacto ul, .terminos p, .derechos p {
-	padding-top: 10%;
+	padding-bottom: 7%;
 }
 
 .redesSociales ul li a {
@@ -202,24 +208,205 @@ img[src$='.svg'] {
 	width: 30%;
 }
 
-.contacto {
-	width: 25%;
-	padding-left: 3%;
-}
-
 .contacto ul li a {
 	text-decoration: none;
 }
 
-.terminos {
-	width: 20%;
+.contacto, .terminos, .redesSociales, .derechos {
+	width: 100%;
+	padding-left: 3%;
+	font-size: 1.2em;
 }
 
-.redesSociales {
-	width: 30%;
+/* Version Movil */
+
+@media (min-width: 600px) {
+	div > h2 {
+		font-size: 1em;
+	}
+	.contacto, .terminos, .redesSociales, .derechos {
+		font-size: 1.2em;
+	}
+	.contacto {
+		width: 25%;
+		padding-left: 3%;
+		order: 1;
+	}
+
+	.terminos {
+		width: 15%;
+		order: 2;
+	}
+
+	.redesSociales {
+		width: 25%;
+		order: 3;
+	}
+
+	.derechos {
+		width: 20%;
+		order: 4;
+	}
 }
 
-.derechos {
-	width: 25%;
-}
+/* Versión Desktop */
+@media (min-width: 900px) {
+	#contenido {
+		margin: 0 auto;
+		max-width: 900px;
+	}
 
+	header {
+		font-size: 16px;
+		color: white;
+		display: flex;
+		flex-flow: row;
+		margin: 0 auto;
+		background-color: #5b7989;
+		width: 100%;
+		top: 0;
+		border: 1px;
+		border-radius: 10px 10px 0px 0px;
+		animation-name: header-slidein;
+		animation-duration: 2s;
+		-moz-animation-duration: 2s;
+		-ms-animation-duration: 2s;
+	}
+
+	#logo {
+		text-shadow: 2px 2px #02010a;
+		width: 60%;
+		padding: 2%;
+		float: left;
+	}
+
+	#menu-principal {
+		padding: 2%;
+		width: 30%;
+		float: right;
+	}
+	/* Imagen Secundaria */
+
+	#ImagenSecundaria {
+		text-align: center;
+		padding-top: 2%;
+		margin: 0;
+		display: flex;
+		flex-flow: row wrap;
+		-webkit-flex-flow: row wrap;
+	  	background-color: #d5c75f;
+	  	border: 1px;
+	}
+
+	#paisajes {
+		order: 1;
+		width: 50%;
+	}
+
+	#retratos {
+		order: 2;
+		width: 50%;
+	}
+
+
+	#ImagenSecundaria #paisajes img, #ImagenSecundaria #retratos img {
+		max-height: 300px;
+		border: 2px solid #02010a;
+		width: 85%;
+	}
+
+	#ImagenSecundaria #paisajes img {
+		transition: all 1s;
+		-moz-transition: all 1s;
+		-o-transition: all 1s;
+		-ms-transition: all 1s;
+	}
+
+	#ImagenSecundaria #paisajes img:hover {
+		transform: rotate(10deg);
+		-moz-transform: rotate(10deg);
+		-o-transform: rotate(10deg);
+		-ms-transform: rotate(10deg);
+		border: 2px solid #82c3a6;
+	}
+
+	#ImagenSecundaria #retratos img {
+		transition: all 1s;
+		-moz-transition: all 1s;
+		-o-transition: all 1s;
+		-ms-transition: all 1s;
+	}
+
+	#ImagenSecundaria #retratos img:hover {
+		transform: translate( 20px, -5px);
+		-webkit-transform: translate( 20px, -5px);
+		-moz-transform: translate( 20px, -5px);
+		border: 2px solid #82c3a6;
+	}
+
+	/* Pie de pagina */
+
+	img[src$='.svg'] {
+		width: 15%;
+	}
+
+	.pieDePagina {
+		display: flex;
+	  	flex-flow: row wrap;
+	  	height: 100%;
+	  	width: 100%;
+		clear: both;
+		background-color: #C6d5c5;
+		border: 1px;
+		border-radius: 0px 0px 10px 10px;
+		padding-top: 3%;
+		padding-bottom: 3%;
+	}
+
+	div > h2 {
+		font-size: 1.2em;
+	}
+
+	.pieDePagina ul li {
+		text-align: left;
+	}
+
+	.contacto ul, .terminos p, .derechos p {
+		padding-top: 10%;
+	}
+
+	.redesSociales ul li a {
+		text-decoration: none;
+	}
+
+	.contenido-Redes ul li {
+		width: 30%;
+	}
+
+	.contacto ul li a {
+		text-decoration: none;
+	}
+	
+
+	.contacto {
+		width: 25%;
+		padding-left: 3%;
+		order: 1;
+	}
+
+	.terminos {
+		width: 15%;
+		order: 2;
+	}
+
+	.redesSociales {
+		width: 25%;
+		order: 3;
+	}
+
+	.derechos {
+		width: 20%;
+		order: 4;
+	}
+
+}
